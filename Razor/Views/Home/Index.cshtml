@@ -1,0 +1,118 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+<h1>Razor exercises</h1>
+@*{
+    1. Dichiarare una variabile valorizzandola con il nostro nome.
+    Dichiarare un'altra variabile valorizzandola con il nostro cognome.
+    Stampare il nostro nome e cognome all'interno di un tag h2.
+}*@
+
+@{
+    var Name = "Gabriele";
+    var Lastname = "Pagnotta";
+    <h2>@Name @Lastname</h2>
+}
+@*--------------------------------------------------------------------------------------------------------*@
+
+@*{
+    2. Creare una funzione che stampa la somma dei numeri che vanno da 1 a n (con n passato come parametro - n incluso)
+       Stampare dentro uno span il risultato.
+}*@
+
+@functions{
+    public int sum(int n)
+    {
+        
+        int y = 0;
+        for(var i = 0; i <= n; i++)
+        {
+
+             y += i;
+           
+
+        }
+        return y;
+    }
+
+}
+
+<span>@sum(50)</span>
+
+@*--------------------------------------------------------------------------------------------------------*@
+@*3. Contare quante volte la lettera a è presente nalla frase "nel mezzo del cammin di nostra vita" e stampare questo valore in pagina*@
+
+@{
+    string phrase = "nel bel mezzo del cammin di nostra vita";
+    char[] t = phrase.ToCharArray();
+    int x = 0;
+
+    for(int i = 0; i < phrase.Length; i++)
+    {
+        if (phrase[i] == 'a')
+        {
+            x = x+1;
+
+        }
+        
+    }
+
+}
+<h1>le lettere contenute all'interno della frase sono: @x</h1>
+
+@*--------------------------------------------------------------------------------------------------------*@
+
+@*4. Creare una List<int> di 20 numeri interi (generati random da 1 a 90, 1 e 90 inclusi) 
+     e mostrare in pagina solo i numeri compresi tra 20 e 70*@
+
+@{
+    List<int> numeri = new List<int>();
+    var rand = new Random();
+    int rnd = rand.Next(1,90);
+    if(rnd >= 20 && rnd <= 70)
+    {
+        <h1>il numero randomico è: @rnd</h1>
+    }
+    else
+    {
+        <h2>il numero non è compreso tra 20 e 70</h2>
+    }
+}
+
+@*--------------------------------------------------------------------------------------------------------*@
+
+@*4. 5. Stampare in pagina la data e l'ora attuale (usando la classe DateTime) 
+        con il formato anno-mese-giorno ore:minuti:secondi*@
+
+@{
+     
+    DateTime date = DateTime.Now;
+    var actualdate = date.ToString("dd MMM HH:mm:ss");
+}
+
+<h4>data attuale: @actualdate</h4>
+
+@*--------------------------------------------------------------------------------------------------------*@
+
+@*4. 5. Stampare in pagina la data e l'ora attuale (usando la classe DateTime)
+        con il formato anno-mese-giorno ore:minuti:secondi*@
+@{
+    DateOnly oldate = new DateOnly(2023,03,29);
+    var ff = oldate.ToString("dd/MM/yy");
+}
+
+<h1>data di 7 giorni fa: @ff</h1>
+
+@{
+    var ciao = date.DayOfWeek;
+}
+
+    <h1>oggi è: @ciao</h1>
+@{
+    DateTime newdate = DateTime.Now;
+    var addmonth = newdate.AddYears(1);
+    var yearlater = addmonth.DayOfWeek;
+}
+<h1>il giorno tra un anno sara: @yearlater</h1>
