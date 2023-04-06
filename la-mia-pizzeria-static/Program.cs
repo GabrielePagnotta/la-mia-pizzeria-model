@@ -1,3 +1,5 @@
+using la_mia_pizzeria_static.Models;
+
 namespace la_mia_pizzeria_static
 {
     public class Program
@@ -29,6 +31,12 @@ namespace la_mia_pizzeria_static
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+            using (var ctx = new DbPizzaContext())
+            {
+                ctx.seed();
+            }
 
             app.Run();
         }
