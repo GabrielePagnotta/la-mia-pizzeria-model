@@ -13,4 +13,10 @@
 
 3. **Installare l'estensione ``Microsoft.EntityFrameworkCoreQsqServer``**
 
+ ![screen1](https://user-images.githubusercontent.com/110975140/230560645-5c9c2206-c1d8-4d26-b0ee-4891f65922cf.png)
+ 
+4. **Installare da console `dotnet tool install --global dotnet-ef`**
+
+5. **Installare sempre da console `dotnet add package add package Microsoft.EntityFrameworkCore.Design`**
+
 
