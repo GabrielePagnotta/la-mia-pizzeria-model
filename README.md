@@ -1,3 +1,5 @@
+# Inizializzazione progetto
+
 1. **Creare il progetto**
 
 	Aprire la finestra nuovo progetto e selezionare “ASP.NET Core Webb-App(Model-view-controller)”
@@ -8,5 +10,7 @@
 2. **Selezioniamo la versione 6 di .net core e spuntiamo “Configure for HTTPS”**
 
 <img width="948" alt="Schermata 2023-04-06 alle 23 56 53" src="https://user-images.githubusercontent.com/110975140/230518468-b4946b43-7f12-4771-bf1b-4a9a1c2160de.png">
+
+3. **Installare l'estensione ``Microsoft.EntityFrameworkCoreQsqServer``**
 
 
