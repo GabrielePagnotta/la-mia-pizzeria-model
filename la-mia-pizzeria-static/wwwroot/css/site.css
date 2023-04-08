@@ -16,3 +16,19 @@ html {
 body {
   margin-bottom: 60px;
 }
+.background-img {
+    background-image: url("../Media/stock-vector-pizza-seamless-pattern-755047744.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;
+    background-attachment:fixed;
+    width:100vw;
+    z-index:0;
+}
+
+.overlay{
+    position:absolute;
+    background-color:rgb(128, 128, 128,0.5);
+    width:100vw;
+    height:100%;
+}
