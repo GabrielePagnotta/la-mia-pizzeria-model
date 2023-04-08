@@ -23,11 +23,12 @@
             {
                 
                     <tr>    
-                        <th scope="row">1</th>
+                        <th scope="row">@pizza[i].Id</th>
                         <td>@pizza[i].Name</td>
                         <td> @pizza[i].Description</td>
                         <td><img src="@pizza[i].Image"></td>
                         <td>@pizza[i].Price</td>
+                        <td> <a href="@Url.Action("Details","Pizza",new{Id = pizza[i].Id})">visualizza</a> </td>
                     </tr>
             }
                     
