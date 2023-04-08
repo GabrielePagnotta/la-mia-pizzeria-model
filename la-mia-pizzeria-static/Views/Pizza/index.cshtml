@@ -5,9 +5,11 @@
     var pizza = Model;
 }
 
-
   <h1>@ViewData["Message"]</h1>
         <main role="main" class="pb-3">
+            <div class="background-img">
+                
+                <div class="w-75 m-auto bg-dark">
             <table class="table">
                 <thead>
                     <tr>
@@ -27,13 +29,15 @@
                         <td>@pizza[i].Name</td>
                         <td> @pizza[i].Description</td>
                         <td><img src="@pizza[i].Image"></td>
-                        <td>@pizza[i].Price</td>
-                        <td> <a href="@Url.Action("Details","Pizza",new{Id = pizza[i].Id})">visualizza</a> </td>
+                    <td>@pizza[i].Price <br> <a href="@Url.Action("Details","Pizza",new{Id = pizza[i].Id})">visualizza</a></td>
+                        
                     </tr>
             }
                     
                 </tbody>
             </table>
+        </div>
+            </div>
         </main>
 
 
