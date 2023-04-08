@@ -17,6 +17,6 @@
  
 4. **Installare da console `dotnet tool install --global dotnet-ef`**
 
-5. **Installare sempre da console `dotnet add package add package Microsoft.EntityFrameworkCore.Design`**
+5. **Installare sempre da console `dotnet  add package Microsoft.EntityFrameworkCore.Design`**
 
 
